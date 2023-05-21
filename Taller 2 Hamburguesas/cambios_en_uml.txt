@@ -1,0 +1,21 @@
+Modificaciones UML por Juan Pablo Barón Sandoval
+Incluí un loader_restaurantes como se veía en le taller 1 para cargar de manera separada y más
+facil los archivos, de manera que ya están cargados en las listas adecuadas.
+
+Por el cambio anterior cuando se crea una nueva instancia del restaurante va a pedir por parametro
+las tres listas de los tres diferentes txt.
+Además tiene unos get mas el nombre de los txt que me devuelven la lista de productos, ingredientes
+y combos para cuando quiera añadir cosas busco por la pocisión de la lista restandole uno en el app que
+funciona como el view y es quien maneja la interacción con el usuario.
+
+En el addElementToOrder lo que hace es buscar por id de la orden la odren requerida y a la lista de 
+productos (polimorfica) le añade o el combo, producto o el producto ajustado.
+
+Además en la interfaz se le añadió una opción getfinalprice() que lo que hace es devolver la última
+versión del parametro de precio, ya que si ser llama de nuevo en producto ajustado a la función getprice
+va a cargar si hay elementos añadidos otra vez el precio,para corregir este error se crea este nuevo 
+metodo ya descrito.
+
+Por último el constructor de la clase adjusted product recibe un producto que se copia (con diferente 
+dirección en memoria, para eso las funciones de setprice, setname y copy) para ya sobre este crear un nuevo atributo, 
+que en realidad son dos, una listade elementos añadidos y otra de eliminados.

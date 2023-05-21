@@ -1,0 +1,3 @@
+agua cristal sin gas;5000;460
+agua cristal con gas;5000;600
+gaseosa;5000;1000
